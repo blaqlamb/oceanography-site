@@ -1,0 +1,112 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .navigation {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: .75rem;
+        flex-wrap: wrap;
+    }
+    .navigation:nth-child(3) {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
+        visibility: hidden;
+    }
+    .nav a {
+        align-items: center;
+        justify-content: space-around;
+        padding: .5rem;
+    }
+    .nav a:first-child {
+        padding-top: 1rem;
+    }
+    .fa-bars {
+        visibility: visible;
+    }
+    .onav {
+        margin-left: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .navigation {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .nav a {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        padding-left: 1.2rem;
+    }
+    .fa-bars {
+        visibility: hidden;
+    }
+    .onav {
+        visibility: hidden;
+    }
+}
+
+.header {
+    background: #252525;
+    min-width: 100%;
+    min-height: 1.75rem;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+}
+
+.logo {
+    max-width: 100%;
+    min-width: 236px;
+    max-height: 24px;
+}
+
+.nav {
+    display: flex;
+}
+
+.open {
+    height: auto;
+    visibility: visible;
+}
+
+.nav a {
+    display: flex;
+    list-style: none;
+    color: #fff;
+    margin: 0;
+    line-height: 2.5rem;
+    text-decoration: none;
+}
+
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+}
+
+.onav {
+    border: 0;
+    background-color: transparent;
+}
+
+button:focus {
+    outline: 0;
+}
