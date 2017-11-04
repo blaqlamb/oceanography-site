@@ -5,7 +5,7 @@
     }
     
     footer {
-        display: flex;
+        display: block;
         background: #252525;
         color: #f6f6f6;
     }
@@ -52,9 +52,10 @@
     }
     
     .header {
-        background: #555555;
+        background: #252525;
         min-width: 100%;
-        min-height: 1.75rem;
+        min-height: 2em;
+        padding-top: .5em;
     }
     
     .logo {
@@ -111,6 +112,7 @@
         -webkit-padding-start: 0;
     }
     
+    .ftr,
     .items,
     .item-1,
     .nav-link,
@@ -226,7 +228,7 @@
     }
     
     button {
-        width: 100%;
+        width: auto;
         background-color: #ffffff;
         align-content: right;
     }
@@ -240,7 +242,7 @@
     }
     /* DESKTOP CSS */
     
-    @media screen and (min-width: 1024px) and (max-width: 2100px) {
+    @media screen and (min-width: 1024px) {
         .container {
             max-width: 80%;
         }
@@ -249,10 +251,19 @@
             justify-content: space-between;
             align-items: center;
         }
+        .navigation:nth-child(2) {
+            visibility: hidden;
+        }
         .wrap {
             flex-direction: row;
             justify-content: space-between;
             align-content: center;
+            align-items: center;
+        }
+        .ftr {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
             align-items: center;
         }
         .logo {
@@ -296,6 +307,7 @@
             align-items: center;
             align-self: center;
             justify-content: flex-end;
+            padding-left: 1em;
         }
         .nav-link a {
             color: #ffffff;
@@ -307,6 +319,14 @@
         }
         .nav-link a:hover {
             border-bottom: 2px solid color #ffffff;
+        }
+        .item-2 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .item-2 a {
+            padding-left: 1em;
         }
         .item-3 {
             flex: 2 50%;
@@ -375,6 +395,12 @@
         .container {
             width: 90%;
         }
+        .ftr {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
         .art {
             background: url("../img/art_dt.jpg");
             background-size: contain;
@@ -391,6 +417,7 @@
         }
         .fa-bars {
             visibility: hidden;
+            color: #ffffff;
         }
         .nav-link {
             flex: 1;
@@ -398,13 +425,21 @@
             align-items: center;
             align-self: center;
             justify-content: flex-end;
+            padding-left: .35em;
         }
         .nav-link a {
-            padding-left: 1.2em;
-            display: inline-flex;
+            display: flex;
             flex-direction: row;
             align-self: end;
             flex-wrap: wrap;
+        }
+        .item-2 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .item-2 a {
+            padding-left: 1em;
         }
         .item-3 {
             flex: 2 50%;
@@ -469,14 +504,11 @@
         .container {
             width: 90%;
         }
-        .logo {
-            padding-top: 0.5em;
-        }
         .navigation {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding-top: .75rem;
+            padding: .75rem 0;
             flex-wrap: wrap;
         }
         .navigation:nth-child(3) {
@@ -484,6 +516,7 @@
         }
         .fa-bars {
             visibility: visible;
+            color: #ffffff;
         }
         .onav {
             margin-left: 2.5rem;
@@ -492,12 +525,12 @@
             flex-direction: column;
             display: none;
         }
-        .nav-links {
+        .nav-link {
             align-items: center;
             justify-content: space-around;
             padding: .5rem;
         }
-        .nav-links:first-child {
+        .nav-link:first-child {
             padding-top: 1rem;
         }
         .art {
@@ -520,10 +553,10 @@
         .nav-link {
             flex: 1;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
             align-self: flex-end;
             text-align: right;
-            line-height: 3.25em;
+            line-height: 2em;
         }
         .np {
             display: none;
